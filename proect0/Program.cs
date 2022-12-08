@@ -14,8 +14,8 @@ void InputArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Console.WriteLine("Введите " + i + " элемент массива: ");
-        array[i] = Convert.ToString(Console.ReadLine());
+        Console.WriteLine("Введите " + (i+1) + " элемент массива: ");
+        array[i] = Convert.ToString(Console.ReadLine()!);
     }
 }
 void NewArray(string[] array)
@@ -34,7 +34,6 @@ Console.WriteLine("Введите количество элементов мас
 int massif = Convert.ToInt32(Console.ReadLine());
 string[] array = new string[massif];
 InputArray(array);
-Console.WriteLine();
 Console.WriteLine($"Введённый первоначальный массив: [{string.Join(", ", array)}]");
-Console.Write("Полученный массив: ");
+Console.Write("Полученный массив:   ");
 NewArray(array);
